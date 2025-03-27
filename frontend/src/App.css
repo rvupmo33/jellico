@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  /* color: aliceblue; */
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+
+body {
+  max-width: 1100px;
+  padding: 0px 20px;
+  margin: 0 auto;
+  /* background-color: #18181b; */
+}
+
+/* NAV BAR */
+
+.navbarContainer {
+  margin-top: 10px;
+}
+
+.navbarContainer h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navLinks h4 {
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.navbarContainer hr {
+  margin-bottom: 2px;
+}
+
+.card {
+  border: 1px solid #969696;
+
+  width: 330px; /* Reduced width to fit 3 per row */
+  height: 340px; /* Slightly adjusted height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: default;
+}
+
+.card-content {
+  padding: 10px;
+  background: white;
+  width: 100%; /* Ensures content takes full width */
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.card-link {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Updated to fit 3 in a row */
+  gap: 35px; /* Slightly reduced gap */
+  place-items: center;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 950px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* hhh */
+/* hhh */
+.heroContainer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.firstBlogContainer {
+  width: 100%;
+}
+
+.firstBlogContainer img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.tabsContainer {
+  flex-grow: 1;
+  width: 400px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabsContainer .tabTitles {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabsContainer .tabContent {
+  width: 100%;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.tabsContainer .tabContent .tabDescription {
+  width: 100%;
+  padding: 5px 0px;
+  line-height: 1.6;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Blog List */
+.tabsContainer .tabContent .blogsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Blog Item */
+.tabsContainer .tabContent .blogsList .blogItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+  gap: 10px;
+  border: 1px solid #969696;
+  border-radius: 3px;
+}
+
+.tabsContainer .tabContent .blogsList .blogItem img {
+  width: 100px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.tabsContainer .tabContent .blogsList .blogItem .blogText {
+  flex: 1;
+}
+
+.tabsContainer .tabContent .blogsList .blogItem h3 {
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.tabsContainer .tabContent .blogsList .blogItem p {
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.tabsContainer .tabContent .blogsList .blogItem a {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .heroContainer {
+    flex-direction: column;
+  }
+  .tabsContainer {
+    width: 100%;
+  }
+}
+
+.firstBlogContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border: 1px solid #969696;
+}
+
+.heroText {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.heroText h2 {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.heroText p {
+  font-size: 15px;
+}
+
+.heroText .readMore {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Welcome Bar */
+.welcomeBarContainer {
+  background-color: #e4e4e7;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.welcomeBarContainer h1 {
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.welcomeBarContainer h5 {
+  font-size: 14px;
+  line-height: 150%;
+  margin-top: 5px;
+}
+
+.welcomeBarContainer a {
+  font-size: 12px;
+  border-bottom: 1px solid black;
+}
+
+/* CR?EATE STYLES */
+
+.create-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.create-container h3 {
+  font-weight: 600;
+}
+
+.create-container p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+input {
+  padding: 5px 10px;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  background-color: #e4e4e7;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.pop-up {
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  background-color: #aac4ef;
+  text-align: center;
+  border: none;
+}
+
+textarea {
+  padding: 5px 10px;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Blog post */
+
+.blog-post {
+  margin-bottom: 50px;
+}
+
+.blog-post h1 {
+  margin-bottom: 20px;
+}
+
+.blog-post img {
+  width: 100%;
+  margin-top: 40px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.blog-post p {
+  line-height: 180%;
+}
+
+.date {
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: right;
+}
